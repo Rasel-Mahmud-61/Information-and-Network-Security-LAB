@@ -84,9 +84,53 @@ output: 2c0973f8c19b0b7fea982f0dde75bb0f
 openssl dgst -sha256 -hmac "this is a key" text.txt
 output: 74430d7f825720f412eb3e765cde73d25b14fcd067b05aa4fdaec3419e0e4b93
 
+LAB 3 TASK 7:
+create a text file nammed text.txt
+openssl dgst -md5 text.txt
+output: df7d8c27fad4c98a6678c5719d633bdd
+ghex text.txt &
+flip a bit
+openssl dgst -md5 text.txt
+output:b5eb8626d203594db137cdf1c3b37b69
+match = 7
+
+update the text file text.txt to the previous main content
+openssl dgst -sha256 text.txt
+output: 923b829a244a667348611ffe93016ddf798224b71a0ad6c650e68f9e10cd1c6e
+ghex text.txt &
+flip a bit
+openssl dgst -sha256 text.txt
+output: 5f4a04044aa5e14da6887551c00326cac4abba24355c076c38fb9f8dd6151e8f
+match = 3
+
+h1 = "923b829a244a667348611ffe93016ddf798224b71a0ad6c650e68f9e10cd1c6e"
+h2 = "5f4a04044aa5e14da6887551c00326cac4abba24355c076c38fb9f8dd6151e8f"
+
+i = 0
+cnt = 0
+for ch in h1:
+    if ch==h2[i]:
+        cnt = cnt + 1
+    i = i + 1
+
+print(cnt)
 
 
+LAB 2 TASK 1:
+message = 'odroboewscdrolocdcwkbdmyxdbkmdzvkdpybwyeddrobo' #encrypted message
+LETTERS = 'abcdefghijklmnopqrstuvwxyz'
 
-
-
-
+for key in range(len(LETTERS)):
+   translated = ''
+   for symbol in message:
+      if symbol in LETTERS:
+         num = LETTERS.find(symbol)
+         num = num - key
+         if num < 0:
+            num = num + len(LETTERS)
+         translated = translated + LETTERS[num]
+      else:
+         translated = translated + symbol
+   print('Hacking key #%s: %s' % (key, translated))
+   
+RESULT: ethereum is the best smart contract platform out there
