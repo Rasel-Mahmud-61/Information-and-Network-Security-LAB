@@ -1,0 +1,13 @@
+openssl dgst -sha1 task5.txt
+
+output: 9ff0f9f3abe8612d5ecc43ee02fef4b2338a5259
+
+openssl dgst -md5 task5.txt
+
+output: e8ff2e9a54b8f4798b98a9c439447319
+
+openssl dgst -sha256 task5.txt
+
+output: c6886c744b2b86a0bbccbe486aa11e137bf168074cd85d0ae0445e4eaf29af4f
+
+

@@ -1,0 +1,1 @@
+used to perform the logical operations that determine t˜e equality or difference between the values

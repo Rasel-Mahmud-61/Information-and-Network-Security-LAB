@@ -1,0 +1,11 @@
+openssl dgst -sha1 -hmac "I am rasel" task6.txt
+
+output: 5511b1276e404e28ce9bf63474ec04dc787f46a5
+
+openssl dgst -md5 -hmac "I am rasel" task6.txt
+
+output: 52c0f73e58de367ae413c63b99cc394a
+
+openssl dgst -sha256 -hmac "I am rasel" task6.txt
+
+output: 738e8e4b31b2621358bd43cf753d2ad0245cfc79395004a5043163a51846f0b6
